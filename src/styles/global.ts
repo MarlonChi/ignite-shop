@@ -9,14 +9,10 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;   
     }
 
-    html {
-        font-size: 62.5%;
-    }
-
     body {
         -webkit-font-smoothing: antialiased;
-        font-size: 16px;
-        background: ${(props) => props.theme.gray900}
+        background: ${(props) => props.theme.gray900};
+        color: ${(props) => props.theme.white};
     } 
     
     body, input, textarea, button {
