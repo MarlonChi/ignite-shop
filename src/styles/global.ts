@@ -1,22 +1,20 @@
-"use client";
+import { globalCss } from ".";
 
-import { createGlobalStyle } from "styled-components";
+export const globalStyles = globalCss({
+  '*': {
+    margin: 0,
+    padding: 0,
+    boxSizing: 'border-box',
+  },
 
-export const GlobalStyle = createGlobalStyle`
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;   
-    }
+  body: {
+    backgroundColor: '$gray900',
+    color: '$gray100',
+    '-webkit-font-smoothing': 'antialiased',
+  },
 
-    body {
-        -webkit-font-smoothing: antialiased;
-        background: ${(props) => props.theme.gray900};
-        color: ${(props) => props.theme.white};
-    } 
-    
-    body, input, textarea, button {
-        font-family: 'Roboto';
-        font-weight: 400;
-    }
-`;
+  'body, input, textarea, button': {
+    fontFamily: 'Roboto',
+    fontWeight: 400,
+  }
+})
